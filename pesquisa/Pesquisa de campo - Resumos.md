@@ -1,0 +1,1 @@
+com base nas perguntas [[Pesquisa de campo - Perguntas]] e as respostas obitas [[Pesquisa de campo - Resposta Paulo Pereira]]
