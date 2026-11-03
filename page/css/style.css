@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;800&display=swap');
+
+:root {
+    --bg-creme: #FDF9EE;
+    --marrom-escuro: #4A2E1B;
+    --laranja-primario: #C85A17;
+    --bege-input: #F3E8D3;
+    --texto-escuro: #333333;
+}
+
+body {
+    background-color: var(--bg-creme);
+    font-family: 'Nunito', sans-serif;
+    color: var(--texto-escuro);
+}
+
+/* Tipografia */
+h1, h2, h3, h4 { font-weight: 800; color: var(--marrom-escuro); }
+.text-marrom { color: var(--marrom-escuro); }
+
+/* Botões Customizados */
+.btn-laranja {
+    background-color: var(--laranja-primario);
+    color: white;
+    border-radius: 25px;
+    font-weight: 700;
+    padding: 10px 20px;
+    border: none;
+    width: 100%;
+    transition: 0.3s;
+}
+.btn-laranja:hover { background-color: #a84a12; color: white; }
+
+.btn-marrom {
+    background-color: var(--marrom-escuro);
+    color: white;
+    border-radius: 25px;
+    font-weight: 700;
+    padding: 10px 20px;
+    border: none;
+    width: 100%;
+}
+.btn-marrom:hover { background-color: #331f11; color: white; }
+
+.btn-outline-marrom {
+    background-color: transparent;
+    color: var(--marrom-escuro);
+    border: 2px solid var(--marrom-escuro);
+    border-radius: 25px;
+    font-weight: 700;
+    padding: 8px 20px;
+    width: 100%;
+}
+
+/* Inputs Customizados */
+.form-control-custom {
+    background-color: var(--bege-input);
+    border: 1px solid #dcd1bc;
+    border-radius: 20px;
+    padding: 12px 15px;
+}
+.form-control-custom:focus {
+    background-color: var(--bege-input);
+    box-shadow: 0 0 0 0.25rem rgba(200, 90, 23, 0.25);
+    border-color: var(--laranja-primario);
+}
+
+/* Cards de Saldo */
+.card-saldo {
+    background-color: var(--bege-input);
+    border-radius: 15px;
+    padding: 15px;
+    text-align: center;
+    border: none;
+}
+.card-saldo h5 { font-size: 0.9rem; color: var(--texto-escuro); margin-bottom: 5px;}
+.card-saldo p { font-weight: 800; font-size: 1.2rem; margin: 0; color: var(--marrom-escuro);}
+
+/* Header Escuro (para telas de login) */
+.header-marrom-top {
+    background-color: var(--marrom-escuro);
+    border-radius: 0 0 30px 30px;
+    padding: 40px 20px;
+    text-align: center;
+    color: white;
+}
