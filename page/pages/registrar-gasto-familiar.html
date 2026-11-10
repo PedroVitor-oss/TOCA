@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TOCA - Registrar Gasto Familiar</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body class="py-4">
+
+<div class="container" style="max-width: 400px;">
+
+<div class="topbar">
+    <a href="extrato-familiar.html" class="voltar">←</a>
+    <h4>Gasto da família</h4>
+    
+</div>
+<form>
+    <div class="mb-3">
+    <label class="form-label text-marrom">Valor (R$)</label>
+    <input type="text" class="form-control form-control-custom dinheiro fs-3 text-center" placeholder="0,00" inputmode="decimal" required>
+</div>
+    <label class="form-label text-marrom">Categoria</label>
+    <div class="d-flex gap-2 flex-wrap mb-3" data-grupo>
+        <span class="chip-opcao ativo">🛒 Mercado</span><span class="chip-opcao">🏠 Casa</span><span class="chip-opcao">🚌 Transporte</span><span class="chip-opcao">🎬 Lazer</span><span class="chip-opcao">📚 Escola</span>
+    </div>
+    <div class="mb-3">
+    <label class="form-label text-marrom">Descrição</label>
+    <input type="text" class="form-control form-control-custom" placeholder="Descrição..." >
+</div>
+    <div class="mb-3">
+    <label class="form-label text-marrom">Data</label>
+    <input type="date" class="form-control form-control-custom" placeholder="" value="2024-02-03" >
+</div>
+    <button type="button" class="btn btn-laranja" onclick="redirecionar('sucesso.html?titulo=Gasto%20registrado&msg=J%C3%A1%20aparece%20no%20extrato%20da%20fam%C3%ADlia.&destino=extrato-familiar.html')">SALVAR GASTO</button>
+</form>
+</div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../js/script.js"></script>
+</body>
+</html>

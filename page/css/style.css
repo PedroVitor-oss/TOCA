@@ -84,3 +84,125 @@ h1, h2, h3, h4 { font-weight: 800; color: var(--marrom-escuro); }
     text-align: center;
     color: white;
 }
+
+/* =========================================================
+   COMPONENTES COMPARTILHADOS (telas T03–T61)
+   ========================================================= */
+
+/* Espaço para o menu inferior fixo */
+body.com-menu { padding-bottom: 90px; }
+
+/* Barra superior com botão voltar */
+.topbar { display: flex; align-items: center; gap: 12px; margin-bottom: 20px; }
+.topbar h4 { margin: 0; flex-grow: 1; font-size: 1.25rem; }
+.topbar .voltar { color: var(--marrom-escuro); text-decoration: none; font-size: 1.5rem; line-height: 1; }
+
+/* Cards genéricos */
+.card-toca {
+    background-color: #fff;
+    border: 1px solid #eadfc8;
+    border-radius: 15px;
+    padding: 15px;
+    margin-bottom: 12px;
+}
+.card-bege { background-color: var(--bege-input); border: none; border-radius: 15px; padding: 15px; margin-bottom: 12px; }
+
+/* Item de lista (extrato, notificações, aprovações...) */
+.item-lista {
+    display: flex; align-items: center; gap: 12px;
+    background: #fff; border: 1px solid #eadfc8; border-radius: 15px;
+    padding: 12px; margin-bottom: 10px;
+    color: inherit; text-decoration: none;
+}
+.item-lista:hover { color: inherit; background: #fffaf0; }
+.item-lista .icone {
+    width: 44px; height: 44px; flex-shrink: 0;
+    background: var(--bege-input); border-radius: 12px;
+    display: flex; align-items: center; justify-content: center; font-size: 1.4rem;
+}
+.item-lista .info { flex-grow: 1; min-width: 0; }
+.item-lista .info strong { display: block; color: var(--marrom-escuro); }
+.item-lista .info small { color: #7a6a5a; }
+.valor-neg { color: #b3261e; font-weight: 800; }
+.valor-pos { color: #2e8b57; font-weight: 800; }
+
+/* Selos */
+.selo { display: inline-block; font-size: 0.75rem; font-weight: 700; padding: 3px 10px; border-radius: 20px; }
+.selo-laranja { background: #f9dcc4; color: var(--laranja-primario); }
+.selo-verde { background: #d6f0e0; color: #1f7a45; }
+.selo-marrom { background: var(--marrom-escuro); color: #fff; }
+.selo-cinza { background: #e8e0d0; color: #6b5a48; }
+
+/* Barra de progresso no padrão TOCA */
+.progress-toca { height: 14px; border-radius: 10px; background-color: #e5dcc8; }
+.progress-toca .progress-bar { background-color: #2ecc71; border-radius: 10px; }
+
+/* Chips de seleção (categorias, humor, filtros) */
+.chip-opcao {
+    display: inline-block; cursor: pointer; user-select: none;
+    background: var(--bege-input); border: 2px solid transparent;
+    border-radius: 20px; padding: 6px 14px; font-weight: 700; font-size: 0.9rem;
+    color: var(--marrom-escuro);
+}
+.chip-opcao.ativo { border-color: var(--laranja-primario); background: #f9dcc4; }
+
+/* Botões extras */
+.btn-verde { background-color: #2e8b57; color: #fff; border-radius: 25px; font-weight: 700; padding: 10px 20px; border: none; width: 100%; }
+.btn-verde:hover { background-color: #25724a; color: #fff; }
+.btn-vermelho-outline { background: transparent; color: #b3261e; border: 2px solid #b3261e; border-radius: 25px; font-weight: 700; padding: 8px 20px; width: 100%; }
+.btn-vermelho-outline:hover { background: #b3261e; color: #fff; }
+.link-marrom { color: var(--marrom-escuro); font-weight: 700; text-decoration: none; }
+
+/* Switch Bootstrap na cor do app */
+.form-check-input:checked { background-color: var(--laranja-primario); border-color: var(--laranja-primario); }
+.form-check-input:focus { box-shadow: 0 0 0 0.25rem rgba(200, 90, 23, 0.25); border-color: var(--laranja-primario); }
+
+/* Passos do onboarding */
+.passos { display: flex; gap: 6px; margin-bottom: 25px; }
+.passos span { flex: 1; height: 6px; border-radius: 6px; background: #e5dcc8; }
+.passos span.feito { background: var(--laranja-primario); }
+
+/* Avatar */
+.avatar { width: 56px; height: 56px; border-radius: 50%; background: var(--bege-input); border: 3px solid var(--marrom-escuro); display: flex; align-items: center; justify-content: center; font-size: 1.8rem; flex-shrink: 0; }
+.avatar-grande { width: 90px; height: 90px; font-size: 3rem; margin: 0 auto 10px; }
+.avatar-opcao { width: 56px; height: 56px; border-radius: 14px; background: var(--bege-input); border: 2px solid transparent; font-size: 1.8rem; display: flex; align-items: center; justify-content: center; cursor: pointer; }
+.avatar-opcao.ativo { border-color: var(--marrom-escuro); background: #f9dcc4; }
+.avatar-opcao.bloqueado { opacity: .45; }
+
+/* Menu inferior fixo */
+.menu-inferior {
+    position: fixed; bottom: 0; left: 0; right: 0; z-index: 1000;
+    background: var(--marrom-escuro); border-radius: 22px 22px 0 0;
+    padding: 8px 6px calc(8px + env(safe-area-inset-bottom, 0px));
+}
+.menu-inferior .itens { max-width: 400px; margin: 0 auto; display: flex; justify-content: space-around; }
+.menu-inferior a { flex: 1; text-align: center; color: #cdb9a5; text-decoration: none; font-size: 0.72rem; font-weight: 700; padding: 4px 0; }
+.menu-inferior a .ico { display: block; font-size: 1.35rem; line-height: 1.2; }
+.menu-inferior a.ativo { color: #fff; }
+.menu-inferior a.ativo .ico { filter: drop-shadow(0 0 4px var(--laranja-primario)); }
+
+/* Telas "modal" (fundo escuro + folha clara) */
+body.fundo-modal { background-color: var(--marrom-escuro); min-height: 100vh; display: flex; align-items: flex-end; justify-content: center; padding: 0; }
+.sheet { background: var(--bg-creme); width: 100%; max-width: 400px; border-radius: 28px 28px 0 0; padding: 28px 22px 30px; position: relative; }
+.sheet .fechar { position: absolute; top: 14px; right: 18px; color: var(--marrom-escuro); text-decoration: none; font-size: 1.4rem; }
+.sheet .emoji-topo { font-size: 3.2rem; text-align: center; display: block; margin-bottom: 8px; }
+
+/* Opções de quiz */
+.opcao-quiz { display: block; width: 100%; text-align: left; background: var(--bege-input); border: 2px solid transparent; border-radius: 15px; padding: 12px 15px; margin-bottom: 10px; font-weight: 700; color: var(--marrom-escuro); }
+.opcao-quiz.certa { border-color: #2e8b57; background: #d6f0e0; }
+.opcao-quiz.errada { border-color: #b3261e; background: #f8d7d4; }
+
+/* Controle de porcentagem */
+.form-range::-webkit-slider-thumb { background: var(--laranja-primario); }
+.form-range::-moz-range-thumb { background: var(--laranja-primario); }
+
+/* Abas e acordeão na cor do app */
+.nav-pills .nav-link { color: var(--marrom-escuro); font-weight: 700; border-radius: 20px; }
+.nav-pills .nav-link.active { background-color: var(--laranja-primario); color: #fff; }
+.accordion-button:not(.collapsed) { background-color: var(--bege-input); color: var(--marrom-escuro); box-shadow: none; }
+.accordion-button:focus { box-shadow: 0 0 0 0.25rem rgba(200, 90, 23, 0.25); }
+
+/* Barras simples do relatório */
+.barra-mes { display: flex; align-items: flex-end; gap: 8px; height: 120px; }
+.barra-mes div { flex: 1; background: var(--laranja-primario); border-radius: 8px 8px 0 0; }
+.barra-mes div.suave { background: #e8b891; }

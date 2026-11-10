@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TOCA - Config. de Notificações</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body class="py-4">
+
+<div class="container" style="max-width: 400px;">
+
+<div class="topbar">
+    <a href="javascript:history.back()" class="voltar">←</a>
+    <h4>Notificações</h4>
+    
+</div>
+<div class="form-check form-switch d-flex justify-content-between align-items-center ps-0 mb-3">
+    <label class="form-check-label" for="n1"><strong class="text-marrom">Lembrete de check-in</strong><small class='text-muted d-block'>Todo dia às 18h</small></label>
+    <input class="form-check-input ms-3 mt-0" type="checkbox" role="switch" id="n1" checked style="width: 3em; height: 1.5em;">
+</div>
+<div class="form-check form-switch d-flex justify-content-between align-items-center ps-0 mb-3">
+    <label class="form-check-label" for="n2"><strong class="text-marrom">Pedidos de aprovação</strong><small class='text-muted d-block'>Quando alguém pedir um gasto ou meta</small></label>
+    <input class="form-check-input ms-3 mt-0" type="checkbox" role="switch" id="n2" checked style="width: 3em; height: 1.5em;">
+</div>
+<div class="form-check form-switch d-flex justify-content-between align-items-center ps-0 mb-3">
+    <label class="form-check-label" for="n3"><strong class="text-marrom">Metas e conquistas</strong><small class='text-muted d-block'>Progresso e metas batidas</small></label>
+    <input class="form-check-input ms-3 mt-0" type="checkbox" role="switch" id="n3" checked style="width: 3em; height: 1.5em;">
+</div>
+<div class="form-check form-switch d-flex justify-content-between align-items-center ps-0 mb-3">
+    <label class="form-check-label" for="n4"><strong class="text-marrom">Resumo semanal</strong><small class='text-muted d-block'>Domingo à noite</small></label>
+    <input class="form-check-input ms-3 mt-0" type="checkbox" role="switch" id="n4" checked style="width: 3em; height: 1.5em;">
+</div>
+<div class="form-check form-switch d-flex justify-content-between align-items-center ps-0 mb-3">
+    <label class="form-check-label" for="n5"><strong class="text-marrom">Dica do dia</strong></label>
+    <input class="form-check-input ms-3 mt-0" type="checkbox" role="switch" id="n5" style="width: 3em; height: 1.5em;">
+</div>
+<button class="btn btn-laranja mt-2" onclick="redirecionar('sucesso.html?titulo=Prefer%C3%AAncias%20salvas&msg=Voc%C3%AA%20s%C3%B3%20receber%C3%A1%20o%20que%20escolheu.&destino=notificacoes.html')">SALVAR</button>
+</div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../js/script.js"></script>
+</body>
+</html>

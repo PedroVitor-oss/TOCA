@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TOCA - Assinatura</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body class="py-4">
+
+<div class="container" style="max-width: 400px;">
+
+<div class="topbar">
+    <a href="perfil-responsavel.html" class="voltar">←</a>
+    <h4>Meu plano</h4>
+    
+</div>
+<div class="card-toca border-2" style="border-color: var(--laranja-primario);">
+    <div class="d-flex justify-content-between"><h4 class="mb-0">Gratuito</h4><span class="selo selo-verde">Plano atual</span></div>
+    <p class="text-muted mt-2 mb-0">1 filho · metas ilimitadas · relatório básico</p>
+</div>
+<div class="card-bege">
+    <div class="d-flex justify-content-between"><h4 class="mb-0">⭐ Premium</h4><strong>R$ 14,90/mês</strong></div>
+    <ul class="mt-2 mb-3 ps-3"><li>Até 5 filhos</li><li>Relatório mensal completo</li><li>Exportação de dados</li><li>Biblioteca completa</li></ul>
+    <button class="btn btn-laranja" onclick="redirecionar('sucesso.html?titulo=Bem-vindo%20ao%20Premium%21&msg=Seus%20novos%20recursos%20j%C3%A1%20est%C3%A3o%20liberados.&destino=perfil-responsavel.html')">ASSINAR PREMIUM</button>
+</div>
+<h6 class="text-marrom">Forma de pagamento</h6>
+<div class="d-flex gap-2 mb-3" data-grupo><span class="chip-opcao ativo">💳 Cartão</span><span class="chip-opcao">📱 Pix</span></div>
+<small class="text-muted">Cancele quando quiser, direto no app.</small>
+</div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../js/script.js"></script>
+</body>
+</html>

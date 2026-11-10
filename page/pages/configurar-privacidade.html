@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TOCA - Privacidade</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body class="py-4">
+
+<div class="container" style="max-width: 400px;">
+
+<div class="topbar">
+    <a href="perfil-responsavel.html" class="voltar">←</a>
+    <h4>Privacidade</h4>
+    
+</div>
+<p class="text-muted">Dados de menores são protegidos pela LGPD. Você decide o que é compartilhado.</p>
+<div class="form-check form-switch d-flex justify-content-between align-items-center ps-0 mb-3">
+    <label class="form-check-label" for="v1"><strong class="text-marrom">Mostrar saldo do filho para outros responsáveis</strong></label>
+    <input class="form-check-input ms-3 mt-0" type="checkbox" role="switch" id="v1" checked style="width: 3em; height: 1.5em;">
+</div>
+<div class="form-check form-switch d-flex justify-content-between align-items-center ps-0 mb-3">
+    <label class="form-check-label" for="v2"><strong class="text-marrom">Compartilhar conquistas com amigos</strong><small class='text-muted d-block'>Só selos, nunca valores</small></label>
+    <input class="form-check-input ms-3 mt-0" type="checkbox" role="switch" id="v2" style="width: 3em; height: 1.5em;">
+</div>
+<div class="form-check form-switch d-flex justify-content-between align-items-center ps-0 mb-3">
+    <label class="form-check-label" for="v3"><strong class="text-marrom">Usar dados para gerar dicas</strong><small class='text-muted d-block'>Melhora as dicas semanais</small></label>
+    <input class="form-check-input ms-3 mt-0" type="checkbox" role="switch" id="v3" checked style="width: 3em; height: 1.5em;">
+</div>
+<div class="form-check form-switch d-flex justify-content-between align-items-center ps-0 mb-3">
+    <label class="form-check-label" for="v4"><strong class="text-marrom">Receber e-mails de novidades</strong></label>
+    <input class="form-check-input ms-3 mt-0" type="checkbox" role="switch" id="v4" style="width: 3em; height: 1.5em;">
+</div>
+<div class="alert alert-secondary">🔒 O TOCA nunca vende dados da sua família.</div>
+<div class="d-grid gap-2">
+    <button class="btn btn-laranja" onclick="redirecionar('sucesso.html?titulo=Privacidade%20salva&msg=Suas%20escolhas%20foram%20atualizadas.&destino=perfil-responsavel.html')">SALVAR</button>
+    <a href="exportar-dados.html" class="btn btn-outline-marrom">BAIXAR MEUS DADOS</a>
+    <button class="btn btn-vermelho-outline" onclick="redirecionar('confirmacao.html?titulo=Excluir%20conta%3F&msg=Todos%20os%20dados%20da%20fam%C3%ADlia%20ser%C3%A3o%20apagados.&destino=../index.html')">EXCLUIR CONTA</button>
+</div>
+</div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../js/script.js"></script>
+</body>
+</html>

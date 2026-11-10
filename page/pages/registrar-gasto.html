@@ -26,7 +26,7 @@
 
     <!-- Valor Principal -->
     <div class="text-center py-4" style="background-color: var(--laranja-primario);">
-        <h1 class="display-4 fw-bold text-white mb-0">R$ 0,00</h1>
+        <div class="d-flex justify-content-center align-items-center gap-2"><span class="fs-3 text-white">R$</span><input type="text" inputmode="decimal" class="dinheiro display-4 fw-bold text-white bg-transparent border-0 text-center" style="width: 200px; outline: none;" placeholder="0,00"></div>
     </div>
 
     <div class="container mt-4" style="max-width: 400px;">
@@ -37,7 +37,7 @@
         </div>
 
         <h5 class="mb-3">Categoria</h5>
-        <div class="d-flex gap-2 mb-4 overflow-auto pb-2">
+        <div class="d-flex gap-2 mb-4 overflow-auto pb-2" data-grupo>
             <div class="categoria-btn flex-shrink-0" style="width: 100px;">
                 <div class="fs-3">🍰</div>
                 <small>ALIMENTO</small>
@@ -62,7 +62,7 @@
             <input type="date" class="form-control input-escuro" value="2024-02-03">
         </div>
 
-        <button class="btn btn-laranja mb-5" onclick="redirecionar('dashboard-filho.html')">CONFIRMAR GASTO</button>
+        <button class="btn btn-laranja mb-5" onclick="redirecionar('micro-licao.html')">CONFIRMAR GASTO</button>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>

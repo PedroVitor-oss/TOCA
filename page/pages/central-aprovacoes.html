@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TOCA - Central de Aprovações</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body class="com-menu py-4">
+
+<div class="container" style="max-width: 400px;">
+
+<div class="topbar">
+    <a href="dashboard-responsavel.html" class="voltar">←</a>
+    <h4>Aprovações</h4>
+    
+</div>
+<ul class="nav nav-pills mb-3" role="tablist">
+    <li class="nav-item"><button class="nav-link active" data-bs-toggle="pill" data-bs-target="#pendentes">Pendentes <span class="badge bg-danger">3</span></button></li>
+    <li class="nav-item"><button class="nav-link" data-bs-toggle="pill" data-bs-target="#historico">Histórico</button></li>
+</ul>
+<div class="tab-content">
+    <div class="tab-pane fade show active" id="pendentes">
+        <div class="card-toca">
+            <a href="detalhe-aprovacao.html" class="text-decoration-none text-reset d-flex align-items-center gap-3 mb-3">
+                <div class="icone fs-2">🍕</div><div class="flex-grow-1"><strong class="text-marrom">Gasto de R$ 50,00</strong><br><small class="text-muted">John · Lanche com amigos</small></div>
+            </a>
+            <div class="d-flex gap-2">
+                <button class="btn btn-verde" onclick="redirecionar('sucesso.html?titulo=Gasto%20aprovado&msg=John%20foi%20avisado.&destino=central-aprovacoes.html')">Aprovar</button>
+                <button class="btn btn-vermelho-outline" onclick="redirecionar('sucesso.html?titulo=Gasto%20recusado&msg=John%20foi%20avisado.&destino=central-aprovacoes.html')">Recusar</button>
+            </div>
+        </div>
+        <div class="card-toca">
+            <a href="aprovar-meta.html" class="text-decoration-none text-reset d-flex align-items-center gap-3 mb-3">
+                <div class="icone fs-2">🎧</div><div class="flex-grow-1"><strong class="text-marrom">Nova meta: Fone de ouvido</strong><br><small class="text-muted">John · R$ 900,00</small></div>
+            </a>
+            <a href="aprovar-meta.html" class="btn btn-laranja">Ver meta</a>
+        </div>
+        <div class="card-toca">
+            <a href="detalhe-aprovacao.html" class="text-decoration-none text-reset d-flex align-items-center gap-3 mb-3">
+                <div class="icone fs-2">⚙️</div><div class="flex-grow-1"><strong class="text-marrom">Mudar prazo da meta</strong><br><small class="text-muted">John pediu +2 meses</small></div>
+            </a>
+            <div class="d-flex gap-2">
+                <button class="btn btn-verde" onclick="redirecionar('sucesso.html?titulo=Pedido%20aprovado&msg=John%20foi%20avisado.&destino=central-aprovacoes.html')">Aprovar</button>
+                <button class="btn btn-vermelho-outline" onclick="redirecionar('sucesso.html?titulo=Pedido%20recusado&msg=John%20foi%20avisado.&destino=central-aprovacoes.html')">Recusar</button>
+            </div>
+        </div>
+    </div>
+    <div class="tab-pane fade" id="historico">
+        <a href="#" class="item-lista">
+    <div class="icone">✅</div>
+    <div class="info"><strong>Gasto de R$ 20,00</strong><small>Aprovado em 28/01</small></div>
+    <div class="text-end"><span class="selo selo-verde">OK</span></div>
+</a>
+        <a href="#" class="item-lista">
+    <div class="icone">❌</div>
+    <div class="info"><strong>Gasto de R$ 90,00</strong><small>Recusado em 25/01</small></div>
+    <div class="text-end"><span class="selo selo-cinza">Recusado</span></div>
+</a>
+        <a href="#" class="item-lista">
+    <div class="icone">✅</div>
+    <div class="info"><strong>Meta: Bicicleta</strong><small>Aprovada em 10/01</small></div>
+    <div class="text-end"><span class="selo selo-verde">OK</span></div>
+</a>
+    </div>
+</div>
+</div>
+<nav class="menu-inferior"><div class="itens"><a href="dashboard-responsavel.html"><span class="ico">🏠</span>Início</a><a href="extrato-familiar.html"><span class="ico">📄</span>Extrato</a><a href="central-aprovacoes.html" class="ativo"><span class="ico">✅</span>Aprovações</a><a href="painel-filho.html"><span class="ico">🧒</span>Filho</a><a href="perfil-responsavel.html"><span class="ico">👤</span>Perfil</a></div></nav>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../js/script.js"></script>
+</body>
+</html>
