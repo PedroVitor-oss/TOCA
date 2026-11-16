@@ -7,9 +7,10 @@ const TOCA = {
     // Se o site for aberto pelo servidor (porta 3000) usa caminho relativo;
     // senão (Live Server, arquivo local) aponta para o backend local.
     // Para outro endereço: window.TOCA_API_URL = 'https://meu-servidor.com' antes deste script.
-    url: window.TOCA_API_URL !== undefined
-        ? window.TOCA_API_URL
-        : (location.protocol.startsWith('http') && location.port === '3000' ? '' : 'http://localhost:3000'),
+    // url: window.TOCA_API_URL !== undefined
+    //     ? "https://toca-4cu3.onrender.com"
+    //     : (location.protocol.startsWith('http') && location.port === '3000' ? '' : 'http://localhost:3000'),
+    url:"https://toca-4cu3.onrender.com",
 
     token() { return localStorage.getItem('toca_token'); },
     usuario() { return JSON.parse(localStorage.getItem('toca_usuario') || 'null'); },
@@ -75,3 +76,5 @@ const TOCA = {
         return 'sucesso.html?titulo=' + encodeURIComponent(titulo) + '&msg=' + encodeURIComponent(msg) + '&destino=' + destino;
     }
 };
+
+console.log("API url: ", TOCA.url);
