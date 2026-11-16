@@ -13,20 +13,23 @@
 
     <div class="container text-center" style="max-width: 400px;">
         <!-- Logo -->
-        <img src="img/raposa-logo.png" alt="Logo TOCA" class="img-fluid mb-3" style="max-height: 150px;">
+        <img src="img/TOCO.png" alt="Logo TOCA" class="img-fluid mb-3" style="max-height: 150px;" onerror="this.style.display='none'; document.getElementById('logo-emoji').style.display='block';">
+        <div id="logo-emoji" style="display:none; font-size: 5rem;">🦊</div>
         
         <h1 class="display-4 fw-bold mb-1">TOCA</h1>
         <p class="mb-5 text-marrom fw-bold">sua organização financeira<br>facilitada</p>
 
         <!-- Botões -->
         <div class="d-grid gap-3">
-            <button class="btn btn-marrom" onclick="redirecionar('pages/login.html')">SOU RESPONSÁVEL</button>
-            <button class="btn btn-outline-marrom" onclick="redirecionar('pages/login.html')">SOU FILHO</button>
+            <button class="btn btn-marrom" onclick="redirecionar('pages/login.html?perfil=responsavel')">SOU RESPONSÁVEL</button>
+            <button class="btn btn-outline-marrom" onclick="redirecionar('pages/login.html?perfil=filho')">SOU FILHO</button>
         </div>
     </div>
 
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="js/script.js"></script>
+    <script src="js/api.js"></script>
+    <script src="js/paginas.js"></script>
 </body>
 </html>

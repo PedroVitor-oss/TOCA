@@ -16,7 +16,7 @@
     <h4>Criar / editar meta</h4>
     
 </div>
-<form>
+<form id="form-meta">
     <div class="mb-3"><label class="form-label text-marrom">Ícone</label>
         <div class="d-flex gap-2 flex-wrap" data-grupo>
             <span class="avatar-opcao ativo">🎧</span><span class="avatar-opcao">🎮</span><span class="avatar-opcao">🚲</span><span class="avatar-opcao">👟</span><span class="avatar-opcao">📱</span>
@@ -34,11 +34,13 @@
     <input type="date" class="form-control form-control-custom" placeholder="" required>
 </div>
     <div class="alert alert-secondary">Seu responsável vai precisar aprovar a meta.</div>
-    <button type="button" class="btn btn-laranja" onclick="redirecionar('sucesso.html?titulo=Meta%20enviada%21&msg=Agora%20%C3%A9%20s%C3%B3%20esperar%20seu%20respons%C3%A1vel%20aprovar.&destino=dashboard-filho.html')">SALVAR META</button>
+    <button type="button" class="btn btn-laranja"  data-destino="sucesso.html?titulo=Meta%20enviada%21&msg=Agora%20%C3%A9%20s%C3%B3%20esperar%20seu%20respons%C3%A1vel%20aprovar.&destino=dashboard-filho.html">SALVAR META</button>
 </form>
 </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="../js/script.js"></script>
+    <script src="../js/api.js"></script>
+    <script src="../js/paginas.js"></script>
 </body>
 </html>

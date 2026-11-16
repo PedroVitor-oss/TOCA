@@ -30,12 +30,14 @@
 <label class="form-label text-marrom">Comentário</label>
 <textarea class="form-control form-control-custom mb-3" rows="3" placeholder="Ex.: Boa escolha, John!"></textarea>
 <div class="d-grid gap-2">
-    <button class="btn btn-laranja" onclick="redirecionar('sucesso.html?titulo=Coment%C3%A1rio%20salvo&msg=John%20vai%20ver%20seu%20recado.&destino=extrato-familiar.html')">SALVAR COMENTÁRIO</button>
-    <button class="btn btn-vermelho-outline" onclick="redirecionar('confirmacao.html?titulo=Excluir%20lan%C3%A7amento%3F&msg=Esse%20gasto%20ser%C3%A1%20removido%20do%20extrato.&destino=extrato-familiar.html')">EXCLUIR</button>
+    <button class="btn btn-laranja" id="btn-comentario" data-destino="sucesso.html?titulo=Coment%C3%A1rio%20salvo&msg=John%20vai%20ver%20seu%20recado.&destino=extrato-familiar.html">SALVAR COMENTÁRIO</button>
+    <button class="btn btn-vermelho-outline" id="btn-excluir" data-destino="confirmacao.html?titulo=Excluir%20lan%C3%A7amento%3F&msg=Esse%20gasto%20ser%C3%A1%20removido%20do%20extrato.&destino=extrato-familiar.html">EXCLUIR</button>
 </div>
 </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="../js/script.js"></script>
+    <script src="../js/api.js"></script>
+    <script src="../js/paginas.js"></script>
 </body>
 </html>
