@@ -149,6 +149,8 @@ body.com-menu { padding-bottom: 90px; }
 /* Botões extras */
 .btn-verde { background-color: #2e8b57; color: #fff; border-radius: 25px; font-weight: 700; padding: 10px 20px; border: none; width: 100%; }
 .btn-verde:hover { background-color: #25724a; color: #fff; }
+.btn-azul { background-color: #2196f3; color: #fff; border-radius: 25px; font-weight: 700; padding: 10px 20px; border: none; width: 100%; }
+.btn-azul:hover { background-color: #1976d2; color: #fff; }
 .btn-vermelho-outline { background: transparent; color: #b3261e; border: 2px solid #b3261e; border-radius: 25px; font-weight: 700; padding: 8px 20px; width: 100%; }
 .btn-vermelho-outline:hover { background: #b3261e; color: #fff; }
 .link-marrom { color: var(--marrom-escuro); font-weight: 700; text-decoration: none; }

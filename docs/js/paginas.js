@@ -304,6 +304,35 @@
         });
     };
 
+    // ------------------------------------------------ ENTRADAS
+    P['registrar-entrada-pai.html'] = async function () {
+        const f = $('form');
+        const [valor, descricao, data] = $$('input', f);
+        data.value = new Date().toISOString().slice(0, 10);
+        const botao = $('button[type=button]', f);
+        enviar(f, botao, async function () {
+            await api('/lancamentos', { metodo: 'POST', corpo: { tipo: 'entrada', valor: valor.value, categoria: semEmoji($('.chip-opcao.ativo').textContent), descricao: descricao.value, data: data.value } });
+            ir(destinoDe(botao));
+        });
+    };
+
+    P['registrar-mesada-crianca.html'] = async function () {
+        const f = $('form');
+        const [valor, filhoSelect, descricao, data] = $$('input, select', f);
+        data.value = new Date().toISOString().slice(0, 10);
+        // Carregar filhos da família
+        const membros = await api('/familia/membros');
+        const filhos = membros.filter(m => m.perfil === 'filho');
+        filhoSelect.innerHTML = '<option value="">Selecione o filho...</option>' + filhos.map(filho => '<option value="' + filho.id + '">' + (filho.apelido || filho.nome) + '</option>').join('');
+        const botao = $('button[type=button]', f);
+        enviar(f, botao, async function () {
+            const filhoId = filhoSelect.value;
+            if (!filhoId) throw new Error('Selecione um filho.');
+            await api('/lancamentos', { metodo: 'POST', corpo: { tipo: 'entrada', valor: valor.value, categoria: semEmoji($('.chip-opcao.ativo').textContent), descricao: descricao.value || 'Mesada', data: data.value, filhoId: filhoId } });
+            ir(destinoDe(botao));
+        });
+    };
+
     // ------------------------------------------------ EXTRATOS
     P['extrato-familiar.html'] = async function () {
         const membros = await api('/familia/membros');

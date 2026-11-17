@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TOCA - Registrar Mesada</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body class="py-4">
+
+<div class="container" style="max-width: 400px;">
+
+<div class="topbar">
+    <a href="extrato-familiar.html" class="voltar">←</a>
+    <h4>Mesada da Criança</h4>
+
+</div>
+<form>
+    <div class="mb-3">
+    <label class="form-label text-marrom">Valor (R$)</label>
+    <input type="text" class="form-control form-control-custom dinheiro fs-3 text-center" placeholder="0,00" inputmode="decimal" required>
+</div>
+    <label class="form-label text-marrom">Categoria</label>
+    <div class="d-flex gap-2 flex-wrap mb-3" data-grupo>
+        <span class="chip-opcao ativo">💰 Mesada</span><span class="chip-opcao">🎁 Presente</span><span class="chip-opcao">🏆 Premiação</span><span class="chip-opcao">💵 Outro</span>
+    </div>
+    <div class="mb-3">
+    <label class="form-label text-marrom">Para qual filho</label>
+    <select class="form-select form-control-custom" id="filhoSelect" required>
+        <option value="">Selecione o filho...</option>
+    </select>
+</div>
+    <div class="mb-3">
+    <label class="form-label text-marrom">Descrição</label>
+    <input type="text" class="form-control form-control-custom" placeholder="Descrição (ex: Mesada de Janeiro)" >
+</div>
+    <div class="mb-3">
+    <label class="form-label text-marrom">Data</label>
+    <input type="date" class="form-control form-control-custom" placeholder="" >
+</div>
+    <button type="button" class="btn btn-azul"  data-destino="sucesso.html?titulo=Mesada%20registrada&msg=Mesada%20j%C3%A1%20aparece%20no%20extrato%20do%20filho.&destino=extrato-familiar.html">SALVAR MESADA</button>
+</form>
+</div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../js/script.js"></script>
+    <script src="../js/api.js"></script>
+    <script src="../js/paginas.js"></script>
+</body>
+</html>
